@@ -31,7 +31,6 @@
 											<li><a href="index.html">Home</a></li>
 											<li><a href="generic.html">Generic</a></li>
 											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>
 										</ul>
 									</div>
@@ -49,7 +48,7 @@
 						<body>
 							<SCRIPT>
 function run(){
-var password = prompt("This Area Is Restricted To Flo Members Only. Enter Password Here: ");
+var password = prompt("This Area Is Restricted To Flo Members Only. Enter Password Here: ").setAttribute("type", "password");
 //Change to your own Password
 if(password != 'flo2018'){
 location.reload();
