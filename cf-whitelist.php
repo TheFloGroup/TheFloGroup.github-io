@@ -11,7 +11,7 @@
 
 // Configure your API key and email address below
 
-$cfemailaddress = "me@example.com"; // Cloudflare email address
+$cfemailaddress = "harryy@theflo.group"; // Cloudflare email address
 $cfapikey = ""; // Cloudflare API key
 $type = "Whitelist"; // Use either Whitelist, Blacklist or Unlist as options
 
