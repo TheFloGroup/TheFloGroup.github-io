@@ -31,7 +31,6 @@
 											<li><a href="index.html">Home</a></li>
 											<li><a href="generic.html">Generic</a></li>
 											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Log In</a></li>
 										</ul>
 									</div>
 								</li>
@@ -52,6 +51,8 @@ var password = prompt("This Area Is Restricted To Flo Members Only. Enter Passwo
 //Change to your own Password
 if(password != 'flo2018'){
 location.reload();
+}if (password === null) {
+    window.location.replace("theflo.group");
 }else{
 alert('Success');
 }
