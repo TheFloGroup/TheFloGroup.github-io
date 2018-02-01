@@ -11,6 +11,15 @@
 		});
 
 	$(function() {
+		var options = {
+        escapeKey: false,
+        fadeInDuration: 1.0
+    };
+
+    $("a.open-popup-link").on("click", function(e) {
+        e.preventDefault();
+        $(this).simplePopup(options);
+    });
 
 		var	$window = $(window),
 			$body = $('body'),
