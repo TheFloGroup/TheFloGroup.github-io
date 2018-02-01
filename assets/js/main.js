@@ -17,6 +17,8 @@
 			$wrapper = $('#page-wrapper'),
 			$banner = $('#banner'),
 			$header = $('#header');
+			$main_articles = $main.children('article');
+		
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -56,6 +58,17 @@
 					speed: 1500,
 					offset: $header.outerHeight()
 				});
+		// Nav.
+			var $nav = $header.children('nav'),
+				$nav_li = $nav.find('li');
+
+			// Add "middle" alignment classes if we're dealing with an even number of items.
+				if ($nav_li.length % 2 == 0) {
+
+					$nav.addClass('use-middle');
+					$nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
+
+				}
 
 		// Menu.
 			$('#menu')
@@ -71,102 +84,7 @@
 					target: $body,
 					visibleClass: 'is-menu-visible'
 				});
-
-		// Header.
-			if (skel.vars.IEVersion < 9)
-				$header.removeClass('alt');
-
-			if ($banner.length > 0
-			&&	$header.hasClass('alt')) {
-
-				$window.on('resize', function() { $window.trigger('scroll'); });
-
-				$banner.scrollex({
-					bottom:		$header.outerHeight() + 1,
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt'); },
-					leave:		function() { $header.removeClass('alt'); }
-				});
-
-			}
-
-	});
-
-})(jQuery);
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	skel.breakpoints({
-		xlarge:		'(max-width: 1680px)',
-		large:		'(max-width: 1280px)',
-		medium:		'(max-width: 980px)',
-		small:		'(max-width: 736px)',
-		xsmall:		'(max-width: 480px)',
-		xxsmall:	'(max-width: 360px)'
-	});
-
-	$(function() {
-
-		var	$window = $(window),
-			$body = $('body'),
-			$wrapper = $('#wrapper'),
-			$header = $('#header'),
-			$footer = $('#footer'),
-			$main = $('#main'),
-			$main_articles = $main.children('article');
-
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Fix: Flexbox min-height bug on IE.
-			if (skel.vars.IEVersion < 12) {
-
-				var flexboxFixTimeoutId;
-
-				$window.on('resize.flexbox-fix', function() {
-
-					clearTimeout(flexboxFixTimeoutId);
-
-					flexboxFixTimeoutId = setTimeout(function() {
-
-						if ($wrapper.prop('scrollHeight') > $window.height())
-							$wrapper.css('height', 'auto');
-						else
-							$wrapper.css('height', '100vh');
-
-					}, 250);
-
-				}).triggerHandler('resize.flexbox-fix');
-
-			}
-
-		// Nav.
-			var $nav = $header.children('nav'),
-				$nav_li = $nav.find('li');
-
-			// Add "middle" alignment classes if we're dealing with an even number of items.
-				if ($nav_li.length % 2 == 0) {
-
-					$nav.addClass('use-middle');
-					$nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
-
-				}
-
-		// Main.
+				// Main.
 			var	delay = 325,
 				locked = false;
 
@@ -498,6 +416,27 @@
 						$window.on('load', function() {
 							$main._show(location.hash.substr(1), true);
 						});
+
+	});
+
+
+		// Header.
+			if (skel.vars.IEVersion < 9)
+				$header.removeClass('alt');
+
+			if ($banner.length > 0
+			&&	$header.hasClass('alt')) {
+
+				$window.on('resize', function() { $window.trigger('scroll'); });
+
+				$banner.scrollex({
+					bottom:		$header.outerHeight() + 1,
+					terminate:	function() { $header.removeClass('alt'); },
+					enter:		function() { $header.addClass('alt'); },
+					leave:		function() { $header.removeClass('alt'); }
+				});
+
+			}
 
 	});
 
