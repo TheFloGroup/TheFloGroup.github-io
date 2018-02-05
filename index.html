@@ -65,20 +65,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<a href="#one" class="more scrolly">Learn About Us</a>
 					</section>
 				
-					<div id="main">
-						<a class="open-popup-link" data-content="Hey there!">Click</a>
-						<button type="button" id="open">Open</button>
-						<div id="popup" class="popup-wrapper hide">
-  <div class="popup-content">
-    <div class="popup-title">
-      <button type="button" class="popup-close">&times;</button>
-      <h3>Popup Title</h3>
-    </div>
-    <div class="popup-body">
-      <p>Popup body</p>
-    </div>
-  </div>
-</div>
+					script>
+function setURL(url){
+    document.getElementById('iframe').src = url;
+}
+</script>
+<iframe id="iframe" src="/About.html" />
+<input type="button" onclick="setURL('index.html')" />
 						
 
 						
