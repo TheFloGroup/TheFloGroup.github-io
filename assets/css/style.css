@@ -129,6 +129,10 @@ a.buy:after {
 	color: #AAFC6D;
 }
 
+a.contact:after {
+	color: #64EAF9;
+}
+
 a.About:after {
 	color: #64EAF9;
 }
@@ -159,6 +163,14 @@ a.About {
 
 a.About:hover {
 	background-image:url(../img/About2.png);
+}
+
+a.contact {
+	background-image:url(../img/contact1.png);
+}
+
+a.contact:hover {
+	background-image:url(../img/contact2.png);
 }
 
 a.shop {
