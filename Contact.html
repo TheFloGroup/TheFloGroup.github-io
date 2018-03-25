@@ -16,9 +16,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W4DFG7V');</script>
 <!-- End Google Tag Manager -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="mailto:enquiry@theflo.group" method="post" enctype="text/plain">
+    <label for="fname">Name/Company</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Email Address</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="subject">What Would You Like To Tell Us? </label>
+    <textarea id="subject" name="subject" placeholder="Write your message here" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
