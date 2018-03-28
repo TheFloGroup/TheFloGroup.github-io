@@ -57,16 +57,11 @@ input[type=submit]:hover {
 
 
 <div class="container">
-  <form action="mailto:enquiry@theflo.group" method="post" enctype="text/plain">
-    <label for="fname">Name/Company</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Email Address</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    <label for="subject">What Would You Like To Tell Us? </label>
-    <textarea id="subject" name="subject" placeholder="Write your message here" style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
+  <form method="POST" action="https://formspree.io/harryy@theflo.group">
+  <input type="email" name="Email: " placeholder="Your Email: ">
+  <input type="name" name="Name/Company: " placeholder="Your Name/Company: ">
+  <textarea name="Message: " placeholder="Your Message: "></textarea>
+  <button type="submit">Send</button>
   </form>
 </div>
 
