@@ -348,3 +348,50 @@ a.shop:hover {
 			}
 
 		}
+.values {
+
+    /* The image used */
+    background-image: url("../images/zac-ong-394558-gradient.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  /*background-image: url('../images/Purple_Love.jpg');*/
+
+  background-size: cover;
+
+  color: #fff;
+
+  padding-bottom: 5rem;
+
+}
+
+.value-multiplier {
+
+  margin-bottom: .5rem;
+
+  color: #11DFC7;
+    
+  font-size: 400%;
+
+}
+
+.value-heading {
+
+  margin-bottom: .3rem;
+
+}
+
+.value-description {
+
+  opacity: .8;
+
+  font-weight: 300;
+
+}
